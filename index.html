@@ -12,23 +12,23 @@
   <div class="page">
     <header class="header">
       <div class="container">
-        <a class="header__logo" href="./index.html"><span>m</span><span>e</span></a>
+        <a class="header__logo" href="../../index.html"><span>m</span><span>e</span></a>
         <div class="nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <img src="./assets/images/shape.png" alt="">
+              <img src="../../assets/images/shape.png" alt="">
               <a href="./index.html" class="nav__link">home</a>
             </li>
             <li class="nav__item">
-              <img src="./assets/images/shape.png" alt="">
+              <img src="../../assets/images/shape.png" alt="">
               <a href="./about.html" class="nav__link">about <span>me</span></a>
             </li>
             <li class="nav__item">
-              <img src="./assets/images/shape.png" alt="">
+              <img src="../../assets/images/shape.png" alt="">
               <a href="./activities.html" class="nav__link">activities</a>
             </li>
             <li class="nav__item">
-              <img src="./assets/images/shape.png" alt="">
+              <img src="../../assets/images/shape.png" alt="">
               <a href="https://mssg.me/artemyunusov" class="nav__link">contact <span>me</span></a>
             </li>
           </ul>
@@ -116,6 +116,26 @@
     
     </svg>        
   </div>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+
+  <script>
+
+    const array = document.querySelectorAll(".nav__item");
+    const amount = array.length;
+	
+    for(var i = 0; i < amount; i++){
+        var element = array[i];
+        gsap.from(element, {opacity: 0, duration: 1, x: 50});
+    }
+
+    gsap.from('.intro__img', {opacity: 0, duration: 1, y: -50, delay: .6});
+    gsap.from('.intro__title', {opacity: 0, duration: 1, x: 50, delay: .4});
+    gsap.from('.header__logo', {opacity: 0, duration: 1, x: -50});
+    gsap.from('.social__link', {opacity: 0, duration: 1, delay: .6, z: 50, scale: 2});
+    // gsap.from('.nav__item', {opacity: 0, duration: 1, x: 50, delay: .1});
+
+  </script>
+  
 </body>
 
 </html>
